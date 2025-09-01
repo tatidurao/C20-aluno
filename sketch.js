@@ -8,9 +8,6 @@ let engine;
 let world;
 var ball;
 var ground;
-var angle=60;
-var poly;
-
 
 function setup() {
   createCanvas(400,400);
@@ -19,8 +16,8 @@ function setup() {
   world = engine.world;
   
    var ball_options = {
-    restitution: 0.95,
-    frictionAir:0.01
+    restitution: 0.95, //elastica
+    frictionAir:0.01 //atrito com o ar
   }
    
    var ground_options ={
@@ -29,12 +26,9 @@ function setup() {
   
   
 
-  ground = Bodies.rectangle(200,390,400,20,ground_options);
-  World.add(world,ground);
+  //ball
 
-  ball = Bodies.circle(100,10,20,ball_options);
-  World.add(world,ball);
-  
+  //ground
   
   
 
@@ -50,8 +44,7 @@ function draw()
   
   
 
-  ellipse(ball.position.x,ball.position.y,20);
-  rect(ground.position.x,ground.position.y,400,20);
+ //mostrar ball e ground
  
 
 
