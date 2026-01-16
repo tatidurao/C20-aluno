@@ -9,7 +9,7 @@ let world;
 var ball;
 var ground;
 var angle=60;
-var poly;
+
 
 
 function setup() {
